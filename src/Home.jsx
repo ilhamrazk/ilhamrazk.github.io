@@ -15,6 +15,12 @@ export default function Home() {
         })
     }
 
+    function handleLoveClick() {
+        navigate({
+            pathname: "/LovePage",
+        })
+    }
+
     return (
         <div>
             <h1>Home</h1>
@@ -22,6 +28,8 @@ export default function Home() {
             <button onClick={handleClick}>Go to data page</button>
             <br/>
             <button onClick={handleAppClick}>Go to home page</button>
+            <br/>
+            <button onClick={handleLoveClick}>Surprise</button>
         </div>
     )
 }

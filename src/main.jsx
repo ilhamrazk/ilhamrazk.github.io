@@ -14,6 +14,7 @@ import NotFound from "./NotFound.jsx";
 import ProductSearch from "./ProductSearch.jsx";
 import App from "./App.jsx";
 import "./index.css"
+import LovePage from "./LovePage.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/App" element={<App />} />
+              <Route path="/LovePage" element={<LovePage />} />
               <Route path="/about" element={<About />} />
               <Route path="/images/*" element={<Image />} />
               <Route path="/data" element={<DataLayout />}>

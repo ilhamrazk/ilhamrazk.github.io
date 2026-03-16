@@ -12,12 +12,15 @@ import ProductDetail from "./ProductDetail.jsx";
 import Image from "./Image.jsx";
 import NotFound from "./NotFound.jsx";
 import ProductSearch from "./ProductSearch.jsx";
+import App from "./App.jsx";
+import "./index.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <BrowserRouter>
           <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/App" element={<App />} />
               <Route path="/about" element={<About />} />
               <Route path="/images/*" element={<Image />} />
               <Route path="/data" element={<DataLayout />}>

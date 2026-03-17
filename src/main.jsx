@@ -1,6 +1,6 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
-import {BrowserRouter, Route, Routes} from "react-router";
+import {HashRouter, Route, Routes} from "react-router";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 import Product from "./Product.jsx";
@@ -18,7 +18,7 @@ import LovePage from "./LovePage.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <BrowserRouter>
+      <HashRouter>
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/App" element={<App />} />
@@ -35,6 +35,6 @@ createRoot(document.getElementById('root')).render(
               </Route>
               <Route path="*" element={<NotFound />} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
   </StrictMode>,
 )

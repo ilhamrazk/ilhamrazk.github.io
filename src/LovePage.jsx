@@ -1,5 +1,3 @@
-import "./LovePage.css";
-
 export default function LovePage() {
     return (
         <div className="love-container">

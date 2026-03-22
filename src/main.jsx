@@ -17,10 +17,22 @@ import "./index.css"
 import LovePage from "./LovePage.jsx";
 import Login from "./Login.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import {Toaster} from "react-hot-toast";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <HashRouter>
+          <Toaster
+              position="top-center"
+              toastOptions={{
+                  duration: 3000,
+                  style: {
+                      borderRadius: "12px",
+                      background: "#1f2937",
+                      color: "#fff",
+                  },
+              }}
+          />
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/Home" element={

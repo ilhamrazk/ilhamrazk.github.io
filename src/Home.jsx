@@ -21,6 +21,13 @@ export default function Home() {
         })
     }
 
+    function handleLogOut() {
+        localStorage.removeItem("user");
+        navigate({
+            pathname: "/",
+        })
+    }
+
     return (
         <div>
             <h1>Home</h1>
@@ -30,6 +37,8 @@ export default function Home() {
             <button onClick={handleAppClick}>Go to home page</button>
             <br/>
             <button onClick={handleLoveClick}>Surprise</button>
+            <br/>
+            <button onClick={handleLogOut}>Log Out</button>
         </div>
     )
 }

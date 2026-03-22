@@ -15,12 +15,19 @@ import ProductSearch from "./ProductSearch.jsx";
 import App from "./App.jsx";
 import "./index.css"
 import LovePage from "./LovePage.jsx";
+import Login from "./Login.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <HashRouter>
           <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Login />} />
+              <Route path="/Home" element={
+                  <ProtectedRoute>
+                      <Home />
+                  </ProtectedRoute>
+              } />
               <Route path="/App" element={<App />} />
               <Route path="/LovePage" element={<LovePage />} />
               <Route path="/about" element={<About />} />
